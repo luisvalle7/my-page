@@ -1,0 +1,40 @@
+<nav class="nav-rail">
+  <div class="nav-rail__logo">
+    <span class="nav-rail__logo-mark">AZ</span>
+    <div class="nav-rail__logo-text">
+      <span class="nav-rail__title">ARTEZANO</span>
+      <span class="nav-rail__subtitle">Panel</span>
+    </div>
+  </div>
+
+  <ul class="nav-rail__list">
+    <li>
+      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">
+        <span class="material-symbols-rounded">home</span>
+        <span class="nav-rail__label">Inicio</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/televisions" routerLinkActive="is-active">
+        <span class="material-symbols-rounded">tv</span>
+        <span class="nav-rail__label">Televisores</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/remotes" routerLinkActive="is-active">
+        <span class="material-symbols-rounded">settings_remote</span>
+        <span class="nav-rail__label">Controles</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/contact" routerLinkActive="is-active">
+        <span class="material-symbols-rounded">mail</span>
+        <span class="nav-rail__label">Contacto</span>
+      </a>
+    </li>
+  </ul>
+
+  <footer class="nav-rail__footer">
+    <span class="nav-rail__version">v1.0</span>
+  </footer>
+</nav>

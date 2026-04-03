@@ -1,0 +1,52 @@
+<section class="home-screen">
+  <header class="home-screen__hero">
+    <div>
+      <p class="home-screen__eyebrow">Panel administrativo</p>
+      <h1>TV &amp; Controles</h1>
+      <p>
+        Pequeño panel administrativo construido con Angular y un backend en Spring Boot. Gestiona
+        televisores, controles y consultas de contacto en un solo lugar.
+      </p>
+    </div>
+
+    <div class="home-screen__quick-links">
+      <button routerLink="/televisions" type="button" class="home-screen__quick-card">
+        <span class="material-symbols-rounded">tv</span>
+        <div>
+          <strong>Ir a televisores</strong>
+          <p>Revisa, edita y registra televisores.</p>
+        </div>
+      </button>
+      <button routerLink="/remotes" type="button" class="home-screen__quick-card">
+        <span class="material-symbols-rounded">settings_remote</span>
+        <div>
+          <strong>Ver controles</strong>
+          <p>Administra controles remotos vinculados.</p>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <section class="home-screen__grid">
+    <article class="home-screen__panel">
+      <h2>Resumen del módulo</h2>
+      <ul>
+        @for (item of highlights; track item.title) {
+          <li>
+            <span class="home-screen__bullet"></span>
+            <div>
+              <strong>{{ item.title }}</strong>
+              <p>{{ item.description }}</p>
+            </div>
+          </li>
+        }
+      </ul>
+    </article>
+
+    <article class="home-screen__stats">
+      
+     
+      
+    </article>
+  </section>
+</section>

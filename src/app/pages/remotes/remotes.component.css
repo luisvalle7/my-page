@@ -1,0 +1,32 @@
+.remote-screen { padding: 8px 0 24px; display:flex; flex-direction:column; gap:18px; }
+.remote-screen__header { display:flex; justify-content:space-between; gap:16px; align-items:center; flex-wrap:wrap; }
+.remote-screen__header h1 { margin:0; font-size:1.6rem; }
+.remote-screen__eyebrow { margin:0 0 4px; font-size:0.75rem; text-transform:uppercase; color:var(--accent); }
+.remote-screen__header-actions { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+
+@media (max-width: 640px) {
+  .remote-screen__header { flex-direction:column; align-items:flex-start; gap:10px; }
+  .remote-screen__header-actions { width:100%; }
+  .remote-screen__header-actions .btn { flex:1; justify-content:center; min-width:0; }
+  .remote-screen__header-actions .btn span:last-child { display:none; }
+  .remote-screen__header h1 { font-size:1.4rem; }
+}
+.remote-screen__form { border-radius:14px; overflow:hidden; }
+.remote-screen__form .card { padding:18px; }
+.field-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; }
+@media (max-width:640px) { .field-grid { grid-template-columns: 1fr; } }
+.remote-screen__form-actions { margin-top:12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.remote-screen__feedback { padding:12px; border-radius:10px; background:rgba(16,185,129,0.06); color:var(--success); }
+.remote-screen__grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; }
+@media (max-width:1024px) { .remote-screen__grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width:640px) { .remote-screen__grid { grid-template-columns: 1fr; } }
+.remote-card { padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent), var(--card); box-shadow:0 12px 30px rgba(2,6,23,0.6); display:flex; flex-direction:column; gap:8px; }
+.remote-card:hover { transform:translateY(-4px); box-shadow:0 20px 40px rgba(2,6,23,0.7); }
+.remote-card__header { display:flex; gap:10px; align-items:center; }
+.remote-card__icon { font-size:22px; color:var(--accent-2); }
+.remote-card__header h3 { margin:0; font-size:1rem; }
+.remote-card__header p { margin:0; font-size:0.85rem; color:var(--muted); }
+.remote-card__details { padding:10px; border-radius:10px; background:rgba(255,255,255,0.02); }
+.remote-card__details p { margin:6px 0; color:var(--muted); }
+.remote-card__footer { display:flex; justify-content:flex-end; gap:8px; flex-wrap:wrap; }
+.remote-screen__empty { margin:0; font-size:0.95rem; color:var(--muted); }

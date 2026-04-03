@@ -1,0 +1,47 @@
+.home-screen {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 18px 16px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.home-screen__hero { display: grid; grid-template-columns: 1fr 360px; gap: 18px; align-items: start; }
+.home-screen__hero > .card { padding: 18px; border-radius: 12px; }
+
+.home-screen__hero h1 { margin: 4px 0 10px; font-size: 1.6rem; }
+.home-screen__hero p { margin: 0; font-size: 0.96rem; color: var(--muted); }
+
+.home-screen__eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin: 0 0 6px; }
+
+.home-screen__quick-links { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.home-screen__quick-card { border: none; border-radius: 10px; padding: 12px; background: var(--glass); display:flex; gap:12px; align-items:flex-start; min-height:64px; }
+.home-screen__quick-card .material-symbols-rounded { font-size: 22px; color: var(--accent); }
+
+.home-screen__grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+
+.home-screen__panel { padding: 14px; border-radius:10px; background: linear-gradient(135deg, rgba(0,212,255,0.02), transparent), var(--card); }
+.home-screen__panel h2 { margin:0 0 8px; font-size:1rem; }
+.home-screen__panel ul { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+.home-screen__panel li { display:flex; gap:8px; align-items:flex-start; }
+.home-screen__bullet { width:8px; height:8px; border-radius:999px; background: linear-gradient(135deg,var(--success),#16a34a); margin-top:6px; }
+.home-screen__panel p { margin:2px 0 0; font-size:0.9rem; color:var(--muted); }
+
+.home-screen__stats { display:grid; grid-template-columns: 1fr; gap:10px; }
+.home-screen__stat { padding:12px; border-radius:10px; background: linear-gradient(135deg, rgba(0,212,255,0.02), transparent), var(--card); }
+.home-screen__stat-label { font-size:0.8rem; color:var(--muted); }
+.home-screen__stat-value { font-size:1.1rem; font-weight:700; }
+
+@media (min-width: 900px) {
+  .home-screen__quick-links { grid-template-columns: repeat(1, 1fr); }
+  .home-screen__grid { grid-template-columns: 1fr 360px; }
+  .home-screen__stats { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .home-screen { padding: 14px 12px; }
+  .home-screen__hero { grid-template-columns: 1fr; }
+  .home-screen__quick-card { min-height:56px; }
+}

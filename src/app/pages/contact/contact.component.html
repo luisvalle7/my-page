@@ -1,0 +1,52 @@
+<section class="contact-screen">
+  <div class="contact-card">
+    <header class="contact-card__header">
+      
+      <h1>Contacto</h1>
+      
+
+      <div class="contact-card__info">
+        <div>
+          <span class="material-symbols-rounded">mail</span>
+          <span>luisluisxv64&#64;gmail.com</span>
+        </div>
+        <div style="margin-top: 8px; width: 100%;">
+          <span class="material-symbols-rounded">call</span>
+          <span>61631514</span>
+        </div>
+      </div>
+    </header>
+
+    <form class="contact-card__form" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+      <label class="field-floating">
+        <input type="text" formControlName="name" />
+        <span>Nombre completo</span>
+        @if (contactForm.controls.name.invalid && contactForm.controls.name.touched) {
+          <small>Este campo es obligatorio.</small>
+        }
+      </label>
+
+      <label class="field-floating">
+        <input type="email" formControlName="email" />
+        <span>Correo electrónico</span>
+        @if (contactForm.controls.email.invalid && contactForm.controls.email.touched) {
+          <small>Ingresa un correo válido.</small>
+        }
+      </label>
+
+      <label class="field-floating field-floating--textarea">
+        <textarea rows="4" formControlName="message"></textarea>
+        <span>Mensaje</span>
+        @if (contactForm.controls.message.invalid && contactForm.controls.message.touched) {
+          <small>Describe tu solicitud (mínimo 10 caracteres).</small>
+        }
+      </label>
+
+  <button class="contact-card__submit btn btn--primary" type="submit">Enviar mensaje</button>
+
+      @if (submitted) {
+        <p class="contact-card__success">¡Gracias! Hemos recibido tu mensaje.</p>
+      }
+    </form>
+  </div>
+</section>

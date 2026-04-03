@@ -1,0 +1,40 @@
+.nav-rail {
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  gap:12px;
+  padding:12px;
+  background:transparent;
+}
+
+.nav-rail__logo { display:flex; align-items:center; gap:10px; padding-inline:6px; }
+.nav-rail__logo-mark { width:40px; height:40px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; color:white; background: linear-gradient(135deg,var(--accent),var(--accent-2)); }
+.nav-rail__logo-text { display:flex; flex-direction:column; }
+.nav-rail__title { font-size:0.95rem; letter-spacing:0.12em; text-transform:uppercase; }
+.nav-rail__subtitle { font-size:0.72rem; color:var(--muted); }
+
+.nav-rail__list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; flex:1; }
+.nav-rail__list a { text-decoration:none; display:flex; align-items:center; gap:12px; padding:10px; border-radius:12px; color:var(--text); opacity:0.95; transition:all .14s ease; }
+.nav-rail__list a .material-symbols-rounded { font-size:20px; }
+.nav-rail__list a:hover, .nav-rail__list a.is-active { background: rgba(79,70,229,0.12); color:var(--accent); transform:translateX(4px); }
+.nav-rail__label { white-space:nowrap; }
+
+.nav-rail__footer { font-size:0.8rem; color:var(--muted); display:flex; justify-content:space-between; align-items:center; gap:8px; }
+.nav-rail__version { padding:6px 10px; border-radius:999px; background: rgba(255,255,255,0.02); }
+
+@media (max-width: 700px) {
+  .nav-rail { flex-direction:row; align-items:center; gap:8px; overflow-x:auto; padding:8px; }
+  .nav-rail__logo { padding-inline:6px; }
+  .nav-rail__logo-text { display:none; }
+  .nav-rail__list { flex-direction:row; display:flex; gap:6px; align-items:center; }
+  .nav-rail__list a { padding:8px 10px; border-radius:10px; white-space:nowrap; }
+  .nav-rail__footer { display:none; }
+}
+
+@media (max-width: 420px) {
+  .nav-rail { padding-bottom: 6px; margin-bottom: 4px; }
+  .nav-rail__list a { font-size: 0.9rem; padding: 8px; }
+  .nav-rail__list { gap: 8px; }
+}
+
+.nav-rail__list a.is-active { background: rgba(79,70,229,0.16); color: var(--accent); box-shadow: 0 4px 18px rgba(16,24,32,0.45); }
