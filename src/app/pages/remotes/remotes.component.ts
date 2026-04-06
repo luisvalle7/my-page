@@ -31,8 +31,14 @@ export class RemotesComponent {
   private readonly fb = inject(FormBuilder);
   //private readonly baseUrl = 'http://localhost:8080/remotes';
   //private readonly televisionsUrl = 'http://localhost:8080/televisions';
-  private readonly baseUrl = 'https://examenfinal-backend-412s.onrender.com/remotes';
-  private readonly televisionsUrl = 'https://examenfinal-backend-412s.onrender.com/televisions';
+
+
+  //private readonly baseUrl = 'https://examenfinal-backend-412s.onrender.com/remotes';
+  private readonly baseUrl = 'http://192.168.48.128:8080/remotes';
+  //private readonly televisionsUrl = 'https://examenfinal-backend-412s.onrender.com/televisions';
+  private readonly televisionsUrl = 'http://192.168.48.128:8080/televisions';
+
+
 
   readonly remotes = signal<ControlRemoto[]>([]);
   readonly televisions = signal<Televisor[]>([]);
